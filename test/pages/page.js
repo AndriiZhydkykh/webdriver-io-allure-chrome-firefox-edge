@@ -1,3 +1,4 @@
+
 class Page {
     async open(text) {
         return await browser.url(text);
@@ -14,10 +15,10 @@ class Page {
     async waitForClickable(element) {
        return (await this.getElement(element)).waitForClickable();
     }
-    async waitForDisplayed() {
-        return (await this.getElement(element)).waitForDisplayed();
+    async waitForDisplayed(element) {
+       return (await this.getElement(element)).waitForDisplayed();
     }
-    async waitForEnabled() {
+    async waitForEnabled(element) {
         return (await this.getElement(element)).waitForEnabled();
     }
 
@@ -31,6 +32,10 @@ class Page {
      }
      async moveToByIndex(element,index) {
         await (await this.getElementByIndex(element,index)).moveTo();
+     }
+     async moveTo(element) {
+        await this.waitForDisplayed(element);
+        await (await this.getElement(element)).moveTo();
      }
      
 
