@@ -5,13 +5,12 @@ class Page {
     async getElement(element) {
         return await $(element);
     }
-    async getElements(element) {
+    async getAllElements(element) {
         return await $$(element);
     }
-    async scrollTo(element) {
-        await (await this.getElement(element)).scrollIntoView();
+    async getElementByIndex(element, index) {
+        return (await this.getAllElements(element))[index];
     }
-
     async waitForClickable(element) {
        return (await this.getElement(element)).waitForClickable();
     }
@@ -30,10 +29,12 @@ class Page {
         await this.waitForClickable(element);
         await (await this.getElements(element)).click();
      }
-     async moveTo(element) {
-        await this.waitForClickable(element);
-        await (await this.getElements(element)).moveTo();
+     async moveToByIndex(element,index) {
+        await (await this.getElementByIndex(element,index)).moveTo();
      }
+     
+
+     
 }
 
 module.exports = new Page();

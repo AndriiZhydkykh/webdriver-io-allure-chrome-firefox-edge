@@ -1,20 +1,18 @@
 const HelperScripts = require('../../helper/helper.scripts');
-const Page = require('../pages/page');
 const MainPage = require('../pages/main.page');
-const headerLinksHaveDropdown =['Products','Solutions','Resources','Company','Pricing']
+//const HeaderPage = require('../pages/header.page');
 
-before('open main page and close cookies modal window',async () => {
+
+before('Open main page and close cookies modal window',async () => {
     await MainPage.open();
     await HelperScripts.maximizeWindow();
     await HelperScripts.closeModalCookiesWindow();
     
 });
 describe('Header testing', () => {
-    it('ID 2 - Open Voice Api from main page', async () => {
-        headerLinksHaveDropdown.forEach(function(elem) {
-        let media = $(`//header//span//span[text()="${elem}"]`).moveTo();
-      });
-      await browser.pause(5000)
+
+    it('Check that Product, Solution, Resources,Company,Pricing links in the header menu open dropdown menu when hover those', async () => {
+        await HelperScripts.checkButtonsHaveDropdown(); 
     });
 });
 
