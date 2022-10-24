@@ -3,12 +3,12 @@ const MainPage = require('../pages/main.page');
 const HeaderPage= require('../pages/header.page');
 const SolutionPage= require('../pages/solutions.page');
 
-before('Open main page and close cookies modal window',async () => {
-    await MainPage.open();
-    await HelperScripts.maximizeWindow();
-    await HelperScripts.closeModalCookiesWindow();
-    
+beforeEach(async function () {
+  await MainPage.open();
+  await HelperScripts.maximizeWindow();
+  await HelperScripts.closeModalCookiesWindow();
 });
+
 describe('Header testing', () => {
     it('ID - 4 Open the Talk to an expert from Customer Engagement Platforms page', async () => {
         await HeaderPage.moveToSolutionsButton();
