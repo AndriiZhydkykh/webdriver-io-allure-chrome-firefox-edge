@@ -15,7 +15,7 @@ describe('Header testing', () => {
 
         await Network.clickExploreVXCs();
         await expect(await Network.getExploreVXCsPageTitle()).toHaveText('Run your comms and data on a private cloud highway.');
-        await expect(browser).toHaveTitleContaining('virtual-cross-connects')
+        await expect(browser).toHaveUrlContaining('virtual-cross-connects')
     });
     
 });

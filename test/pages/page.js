@@ -37,6 +37,10 @@ class Page {
         await this.waitForDisplayed(element);
         await (await this.getElement(element)).moveTo();
      }
+     async type(element,text) {
+        await this.waitForEnabled(element);
+        await (await this.getElement(element)).addValue(text);
+     }
      
 
      

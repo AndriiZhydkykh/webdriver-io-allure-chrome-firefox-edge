@@ -10,13 +10,13 @@ before('Open main page and close cookies modal window',async () => {
     
 });
 describe('Header testing', () => {
-    it('ID -4 Open the Talk to an expert from Customer Engagement Platforms page', async () => {
+    it('ID - 4 Open the Talk to an expert from Customer Engagement Platforms page', async () => {
         await HeaderPage.moveToSolutionsButton();
         await HeaderPage.clickCustomerEngagementPlatformsLinkInSolutionDropdown()
 
         await SolutionPage.clickScheduleCallButton();
         await expect(await SolutionPage.getContactUsTitle()).toBeDisplayedInViewport();
-        await expect(browser).toHaveTitleContaining('contact-us')
+        await expect(browser).toHaveUrlContaining('contact-us')
 
     });
     it('ID - 5 Open Explore Healthcare Solutions from Solutions page', async () => {
@@ -25,7 +25,7 @@ describe('Header testing', () => {
 
       await SolutionPage.clickHealthCareApisLink();
       await expect(await SolutionPage.getHealthCarePageTitle()).toBeDisplayedInViewport();
-      await expect(browser).toHaveTitleContaining('healthcare-apis')
+      await expect(browser).toHaveUrlContaining('healthcare-apis')
     });
 
     it('ID - 6 Open the Managed Service Providers page from Solutions page', async () => {
@@ -34,7 +34,7 @@ describe('Header testing', () => {
 
       await SolutionPage.clickContactCenterLink();
       await expect(await SolutionPage.getContactCenterPageTitle()).toBeDisplayedInViewport();
-      await expect(browser).toHaveTitleContaining('contact-center')
+      await expect(browser).toHaveUrlContaining('contact-center')
   });
    
     
