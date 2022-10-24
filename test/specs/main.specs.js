@@ -6,7 +6,7 @@ const MainPage = require('../pages/main.page');
     await HelperScripts.closeModalCookiesWindow();
     
 }); 
-describe.skip('Main page testing', () => {
+describe('Main page testing', () => {
     it('ID 1 - Open Voice Api from main page', async () => {
         await MainPage.clickVoiceApiLink();
         await expect(browser).toHaveUrlContaining('voice-api')
