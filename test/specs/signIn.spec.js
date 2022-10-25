@@ -16,7 +16,7 @@ describe('Sign in testing', () => {
         await SignInPage.typeEmailInput('kinomanj@gmail.com')
         await SignInPage.typePasswordInput(await HelperScripts.getRandomPassword())
         await SignInPage.clickSigInButton();
-        await expect(await SignInPage.getErrorMessage()).toBeDisplayedInViewport();
+        await expect(await SignInPage.getWrongEmailOrPasswordMessage()).toBeDisplayedInViewport();
     });
     it('ID - 16 Sign in with invalid email and invalid password', async () => {
       await HeaderPage.clickSignInLink();

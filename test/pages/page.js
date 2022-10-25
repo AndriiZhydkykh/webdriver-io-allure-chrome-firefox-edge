@@ -41,6 +41,11 @@ class Page {
         await this.waitForEnabled(element);
         await (await this.getElement(element)).addValue(text);
      }
+     async typeAndPressEnter(element,text) {
+        await this.waitForEnabled(element);
+        await (await this.getElement(element)).addValue(text);
+        await browser.keys('Enter')
+     }
      
 
      

@@ -12,6 +12,7 @@ const resourcesButton ='//header//span[text()="Resources"]'
 const developerDocsLinkInTheResourcesButton='header [href="https://developers.telnyx.com/docs/v2"]'
 const signUpLink='(//header//a[@href="/sign-up"])[2]'
 const signInLink='(//header//*[@href="https://portal.telnyx.com/"])[1]'
+const supportCenterLink='(//header//*[@href="https://support.telnyx.com/en/"])[1]'
 
 
 
@@ -56,6 +57,9 @@ async clickSignUpLink() {
 }
 async clickSignInLink() {
   return await Page.click(signInLink);
+}
+async clickSupportCenterLink() {
+  return await Page.click(supportCenterLink);
 }
 
 }
