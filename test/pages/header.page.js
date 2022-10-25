@@ -11,6 +11,7 @@ const networkButton='header li [href="/solutions/global-ip-network"]'
 const resourcesButton ='//header//span[text()="Resources"]'
 const developerDocsLinkInTheResourcesButton='header [href="https://developers.telnyx.com/docs/v2"]'
 const signUpLink='(//header//a[@href="/sign-up"])[2]'
+const signInLink='(//header//*[@href="https://portal.telnyx.com/"])[1]'
 
 
 
@@ -52,6 +53,9 @@ async clickDeveloperDocsLinkInTheResourcesButton() {
 }
 async clickSignUpLink() {
   return await Page.click(signUpLink);
+}
+async clickSignInLink() {
+  return await Page.click(signInLink);
 }
 
 }
