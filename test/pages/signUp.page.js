@@ -8,6 +8,8 @@ const emailErrorText='[id="email_error"]'
 const passwordErrorSymbolText='//*[@aria-hidden="false"][contains(text(),"symbol")]'
 const termsAndConditionsErrorText='[id="terms_and_conditions_error"] span span'
 const nameErrorText='[id="full_name_error"]'
+const registrationSuccessText='//h1'
+
 
 
 class SignUpPage {
@@ -37,6 +39,9 @@ class SignUpPage {
   }
   async getNameErrorText() {
     return await Page.getElement(nameErrorText);
+  }
+  async getRegistrationSuccessText() {
+    return await Page.getElement(registrationSuccessText);
   }
   
 }
