@@ -1,4 +1,3 @@
-
 class Page {
     async open(text) {
         return await browser.url(text);
