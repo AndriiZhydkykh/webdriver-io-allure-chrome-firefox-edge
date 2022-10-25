@@ -10,8 +10,6 @@ const termsAndConditionsErrorText='[id="terms_and_conditions_error"] span span'
 const nameErrorText='[id="full_name_error"]'
 const registrationSuccessText='//h1'
 
-
-
 class SignUpPage {
   async typeEmailInput(text) {
     return await Page.type(emailInput,text);
