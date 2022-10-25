@@ -26,7 +26,7 @@ describe('Sign in testing', () => {
       await SignInPage.clickSigInButton();
       await expect(await SignInPage.getWrongEmailOrPasswordMessage()).toBeDisplayedInViewport();
     });
-    it("ID - 17 Sign in  with valid an email  that doesn't contain @", async () => {
+    it("ID - 17 Sign in with valid email that doesn't contain @", async () => {
       await HeaderPage.clickSignInLink();
     
       await SignInPage.typeEmailInput('kinomanjgmail.com')

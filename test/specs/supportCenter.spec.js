@@ -9,7 +9,7 @@ beforeEach(async function () {
     await HelperScripts.closeModalCookiesWindow();
   });
   
-describe('Header testing', () => {
+describe('Support center page testing', () => {
     it('ID - 18 Open the article How to Sign Up for a Telnyx account on the support center page', async () => {
         await HeaderPage.clickSupportCenterLink();
 
@@ -24,7 +24,7 @@ describe('Header testing', () => {
         await SupportCenterPage.clickHowToSignUpArticleFromSearch();
         await expect(await SupportCenterPage.getHowToSignUpArticleTitle()).toBeDisplayedInViewport()
     });
-    it('ID - 20 Find non-existent page on the support page using search', async () => {
+    it('ID - 20 Find non-existent article on the support page using search', async () => {
       await HeaderPage.clickSupportCenterLink();
 
       await SupportCenterPage.typeSearchField('12345689352156');

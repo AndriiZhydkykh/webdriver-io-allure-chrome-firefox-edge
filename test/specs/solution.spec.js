@@ -28,7 +28,7 @@ describe('Solution page testing', () => {
       await expect(browser).toHaveUrlContaining('healthcare-apis')
     });
 
-    it('ID - 6 Open the Managed Service Providers page from Solutions page', async () => {
+    it('ID - 6 Open the Contact Center Solutions from Solutions page', async () => {
       await HeaderPage.moveToSolutionsButton();
       await HeaderPage.clickSeeAllUseCasesInSolutionsDropdownInSolutionsDropdown()
 

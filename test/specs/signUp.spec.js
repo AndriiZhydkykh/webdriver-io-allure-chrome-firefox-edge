@@ -43,7 +43,7 @@ describe('Sign up page testing', () => {
 
       await expect(await SignUpPage.getTermsAndConditionsErrorText()).toHaveText('Please accept the terms and conditions');
     });
-    it('ID - 13 Sign up with an email that does not contain @', async () => {
+    it('ID - 13 Sign up with empty fields', async () => {
       await HeaderPage.clickSignUpLink();
 
       await SignUpPage.clickCreateAccountButton();
