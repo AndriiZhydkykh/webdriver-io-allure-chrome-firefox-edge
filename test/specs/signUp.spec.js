@@ -50,7 +50,7 @@ describe('Sign up page testing', () => {
       await expect(await SignUpPage.getEmailErrorText()).toHaveText('This field is required.');
       await expect(await SignUpPage.getNameErrorText()).toHaveText('This field is required.');
     })
-    it('ID - 14 Sign up with valid credentials', async () => {
+    xit('ID - 14 Sign up with valid credentials', async () => {
       await HeaderPage.clickSignUpLink();
         
       await SignUpPage.typeEmailInput(await HelperScripts.getRandomEmail());

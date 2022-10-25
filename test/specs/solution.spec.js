@@ -9,14 +9,14 @@ beforeEach(async function () {
   await HelperScripts.closeModalCookiesWindow();
 });
 
-describe('Header testing', () => {
+describe('Solution page testing', () => {
     it('ID - 4 Open the Talk to an expert from Customer Engagement Platforms page', async () => {
-        await HeaderPage.moveToSolutionsButton();
-        await HeaderPage.clickCustomerEngagementPlatformsLinkInSolutionDropdown()
+      await HeaderPage.moveToSolutionsButton();
+      await HeaderPage.clickCustomerEngagementPlatformsLinkInSolutionDropdown()
 
-        await SolutionPage.clickScheduleCallButton();
-        await expect(await SolutionPage.getContactUsTitle()).toBeDisplayedInViewport();
-        await expect(browser).toHaveUrlContaining('contact-us')
+      await SolutionPage.clickScheduleCallButton();
+      await expect(await SolutionPage.getContactUsTitle()).toBeDisplayedInViewport();
+      await expect(browser).toHaveUrlContaining('contact-us')
 
     });
     it('ID - 5 Open Explore Healthcare Solutions from Solutions page', async () => {
