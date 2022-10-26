@@ -10,7 +10,7 @@ beforeEach(async function () {
   });
   
 describe('Sign in testing', () => {
-    xit('ID - 15 Sign in with valid email and invalid password', async () => {
+    it('ID - 15 Sign in with valid email and invalid password', async () => {
         await HeaderPage.clickSignInLink();
         
         await SignInPage.typeEmailInput('kinomanj@gmail.com')
@@ -18,7 +18,7 @@ describe('Sign in testing', () => {
         await SignInPage.clickSigInButton();
         await expect(await SignInPage.getWrongEmailOrPasswordMessage()).toBeDisplayedInViewport();
     });
-    xit('ID - 16 Sign in with invalid email and invalid password', async () => {
+    it('ID - 16 Sign in with invalid email and invalid password', async () => {
       await HeaderPage.clickSignInLink();
       
       await SignInPage.typeEmailInput(await HelperScripts.getRandomEmail())
@@ -26,7 +26,7 @@ describe('Sign in testing', () => {
       await SignInPage.clickSigInButton();
       await expect(await SignInPage.getWrongEmailOrPasswordMessage()).toBeDisplayedInViewport();
     });
-    xit("ID - 17 Sign in with valid email that doesn't contain @", async () => {
+    it("ID - 17 Sign in with valid email that doesn't contain @", async () => {
       await HeaderPage.clickSignInLink();
     
       await SignInPage.typeEmailInput('kinomanjgmail.com')
