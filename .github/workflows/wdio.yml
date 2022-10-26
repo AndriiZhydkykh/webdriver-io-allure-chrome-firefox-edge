@@ -18,7 +18,9 @@ jobs:
         node-version: '14.x'
     - name: Install dependencies
       run: npm ci
+    - name: Install wget
       run: sudo apt install wget
+    - name: Install lgooggle
       run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - name: Run wdio tests
       run: npm run test:allBrowser:headless 
