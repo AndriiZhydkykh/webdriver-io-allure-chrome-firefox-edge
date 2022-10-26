@@ -37,7 +37,7 @@ describe('Sign up page testing', function() {
     it('ID - 12 Sign up without agreeing Terms and Conditions and Privacy Policy', async () => {
       await HeaderPage.clickSignUpLink();
 
-      await SignUpPage.typeEmailInput('user@gmail.com ');
+      await SignUpPage.typeEmailInput('tester@gmail.com');
       await SignUpPage.typeNameInput('User1');
       await SignUpPage.typePasswordInput('User2181681u!');
       await SignUpPage.clickCreateAccountButton();
