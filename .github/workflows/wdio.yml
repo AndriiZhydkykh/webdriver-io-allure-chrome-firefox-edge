@@ -19,7 +19,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Run wdio tests
-      run: npm run test:firefox&edge:headless
+      run: npm run test:firefoxAndEdge:headless
       if: always()
     - uses: actions/upload-artifact@master
       with:
