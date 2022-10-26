@@ -17,8 +17,7 @@ jobs:
       with:
         node-version: 18
     - name: Install dependencies
-      run: npm install
-    - run: sudo apt-get install google-chrome-stable
+      run: npm ci
     - name: Run wdio tests
       run: npm run test:allBrowsers:headless 
       
