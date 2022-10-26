@@ -11,6 +11,7 @@ beforeEach(async function () {
 });
 
 describe('Sign up page testing', () => {
+  this.retries(4)
      it('ID - 10 Sign up with an email that does not contain @', async () => {
       await HeaderPage.clickSignUpLink();
         

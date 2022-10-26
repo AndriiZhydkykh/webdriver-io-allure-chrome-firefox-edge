@@ -10,6 +10,7 @@ beforeEach(async function () {
   });
   
 describe('Sign in testing', () => {
+  this.retries(4)
     it('ID - 15 Sign in with valid email and invalid password', async () => {
         await HeaderPage.clickSignInLink();
         

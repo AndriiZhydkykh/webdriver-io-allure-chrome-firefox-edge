@@ -7,6 +7,7 @@ beforeEach(async function () {
   });
   
 describe('Main page testing', () => {
+    this.retries(4)
     it('ID 1 - Open Voice Api from main page', async () => {
         await MainPage.clickVoiceApiLink();
         await expect(browser).toHaveUrlContaining('voice-api')

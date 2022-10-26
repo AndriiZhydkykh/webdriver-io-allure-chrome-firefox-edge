@@ -9,6 +9,7 @@ beforeEach(async function () {
   });
     
 describe('Header testing', () => {
+    this.retries(4)
     it('ID -2 Check that Product, Solution, Resources,Company,Pricing links in the header menu open dropdown menu when hover those', async () => {
         await HelperScripts.checkButtonsHaveDropdown();
     });

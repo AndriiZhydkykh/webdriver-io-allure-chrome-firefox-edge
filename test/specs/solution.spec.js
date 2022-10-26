@@ -10,6 +10,7 @@ beforeEach(async function () {
 });
 
 describe('Solution page testing', () => {
+  this.retries(4)
     it('ID - 4 Open the Talk to an expert from Customer Engagement Platforms page', async () => {
       await HeaderPage.moveToSolutionsButton();
       await HeaderPage.clickCustomerEngagementPlatformsLinkInSolutionDropdown()

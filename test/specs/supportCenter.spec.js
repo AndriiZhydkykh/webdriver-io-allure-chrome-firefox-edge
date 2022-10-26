@@ -10,6 +10,7 @@ beforeEach(async function () {
   });
   
 describe('Support center page testing', () => {
+  this.retries(4)
     it('ID - 18 Open the article How to Sign Up for a Telnyx account on the support center page', async () => {
         await HeaderPage.clickSupportCenterLink();
 
