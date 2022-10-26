@@ -10,7 +10,7 @@ beforeEach(async function () {
 });
 
 describe('Solution page testing', () => {
-    it('ID - 4 Open the Talk to an expert from Customer Engagement Platforms page', async () => {
+    xit('ID - 4 Open the Talk to an expert from Customer Engagement Platforms page', async () => {
       await HeaderPage.moveToSolutionsButton();
       await HeaderPage.clickCustomerEngagementPlatformsLinkInSolutionDropdown()
 
@@ -19,7 +19,7 @@ describe('Solution page testing', () => {
       await expect(browser).toHaveUrlContaining('contact-us')
 
     });
-    it('ID - 5 Open Explore Healthcare Solutions from Solutions page', async () => {
+    xit('ID - 5 Open Explore Healthcare Solutions from Solutions page', async () => {
       await HeaderPage.moveToSolutionsButton();
       await HeaderPage.clickSeeAllSolutionsInSolutionsDropdown()
 
@@ -28,7 +28,7 @@ describe('Solution page testing', () => {
       await expect(browser).toHaveUrlContaining('healthcare-apis')
     });
 
-    it('ID - 6 Open the Contact Center Solutions from Solutions page', async () => {
+    xit('ID - 6 Open the Contact Center Solutions from Solutions page', async () => {
       await HeaderPage.moveToSolutionsButton();
       await HeaderPage.clickSeeAllUseCasesInSolutionsDropdownInSolutionsDropdown()
 

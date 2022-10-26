@@ -11,7 +11,7 @@ beforeEach(async function () {
 });
 
 describe('Sign up page testing', () => {
-    it('ID - 10 Sign up with an email that does not contain @', async () => {
+    xit('ID - 10 Sign up with an email that does not contain @', async () => {
       await HeaderPage.clickSignUpLink();
         
       await SignUpPage.typeEmailInput('usergmail.com ');
@@ -22,7 +22,7 @@ describe('Sign up page testing', () => {
       await expect(await SignUpPage.getEmailErrorText()).toHaveText('Please enter a valid email address.');
     });
 
-    it('ID - 11 Sign up with a password that does not contain symbol', async () => {
+    xit('ID - 11 Sign up with a password that does not contain symbol', async () => {
       await HeaderPage.clickSignUpLink();
       
       await SignUpPage.typeEmailInput('user@gmail.com ');
@@ -33,7 +33,7 @@ describe('Sign up page testing', () => {
       await expect(await SignUpPage.getPasswordErrorSymbolText()).toHaveText('Contain at least one symbol');
     });
 
-    it('ID - 12 Sign up without agreeing Terms and Conditions and Privacy Policy', async () => {
+    xit('ID - 12 Sign up without agreeing Terms and Conditions and Privacy Policy', async () => {
       await HeaderPage.clickSignUpLink();
 
       await SignUpPage.typeEmailInput('user@gmail.com ');
@@ -43,7 +43,7 @@ describe('Sign up page testing', () => {
 
       await expect(await SignUpPage.getTermsAndConditionsErrorText()).toHaveText('Please accept the terms and conditions');
     });
-    it('ID - 13 Sign up with empty fields', async () => {
+    xit('ID - 13 Sign up with empty fields', async () => {
       await HeaderPage.clickSignUpLink();
 
       await SignUpPage.clickCreateAccountButton();

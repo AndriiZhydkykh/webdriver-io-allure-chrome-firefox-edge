@@ -10,14 +10,14 @@ beforeEach(async function () {
   });
   
 describe('Network page testing', () => {
-    it('ID - 7 Open the virtual cross connects page from Network link in Header menu', async () => {
+    xit('ID - 7 Open the virtual cross connects page from Network link in Header menu', async () => {
         await HeaderPage.clickNetworkButton();
 
         await Network.clickExploreVXCs();
         await expect(await Network.getExploreVXCsPageTitle()).toHaveText('Run your comms and data on a private cloud highway.');
         await expect(browser).toHaveUrlContaining('virtual-cross-connects')
     });
-    it('ID - 8 See price for Elastic SIP Trunking from Network Page', async () => {
+    xit('ID - 8 See price for Elastic SIP Trunking from Network Page', async () => {
         await HeaderPage.clickNetworkButton();
 
         await Network.clickSeePriceButton();
@@ -26,7 +26,7 @@ describe('Network page testing', () => {
         await expect(await Network.getExploreVXCsPageTitle()).toHaveText('SIP Trunk Pricing');
         await expect(browser).toHaveUrlContaining('pricing/elastic-sip')
     });
-    it('ID - 9 Open SMS API from Network Page', async () => {
+    xit('ID - 9 Open SMS API from Network Page', async () => {
         await HeaderPage.clickNetworkButton();
 
         await Network.clickExploreMessaging();

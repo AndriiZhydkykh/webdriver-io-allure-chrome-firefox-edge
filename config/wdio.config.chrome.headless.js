@@ -1,5 +1,4 @@
-const { config } = require("../wdio.conf");
-require("path");
+const { config } = require("./wdio.conf");
 const chromeHeadlessConfig = {
     ...config,
     services: [['selenium-standalone', { chrome: 'latest' }]], 
