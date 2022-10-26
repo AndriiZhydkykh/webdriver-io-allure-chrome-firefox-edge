@@ -13,16 +13,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v1
       with:
-        node-version: '14.x'
+        node-version: 18
     - name: Install dependencies
-      run: npm i
+      run: npm install
     
     - name: Run wdio tests
       run: npm run test:allBrowser:headless 
       
-    - uses: actions/upload-artifact@master
+    - uses: actions/upload-artifact@v1
       with:
         name: allure-results
         path: allure-results
