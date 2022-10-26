@@ -9,7 +9,7 @@ beforeEach(async function () {
   await HelperScripts.closeModalCookiesWindow();
 });
 
-describe('Solution page testing', () => {
+describe('Solution page testing', function() {
   this.retries(4)
     it('ID - 4 Open the Talk to an expert from Customer Engagement Platforms page', async () => {
       await HeaderPage.moveToSolutionsButton();

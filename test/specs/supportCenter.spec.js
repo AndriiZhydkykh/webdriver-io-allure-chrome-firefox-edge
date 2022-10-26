@@ -9,7 +9,7 @@ beforeEach(async function () {
     await HelperScripts.closeModalCookiesWindow();
   });
   
-describe('Support center page testing', () => {
+describe('Support center page testing', function(){
   this.retries(4)
     it('ID - 18 Open the article How to Sign Up for a Telnyx account on the support center page', async () => {
         await HeaderPage.clickSupportCenterLink();

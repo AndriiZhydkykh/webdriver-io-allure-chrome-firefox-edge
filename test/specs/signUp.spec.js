@@ -10,7 +10,7 @@ beforeEach(async function () {
   await HelperScripts.closeModalCookiesWindow();
 });
 
-describe('Sign up page testing', () => {
+describe('Sign up page testing', function() {
   this.retries(4)
      it('ID - 10 Sign up with an email that does not contain @', async () => {
       await HeaderPage.clickSignUpLink();

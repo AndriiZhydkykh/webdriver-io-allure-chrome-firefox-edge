@@ -9,7 +9,7 @@ beforeEach(async function () {
     await HelperScripts.closeModalCookiesWindow();
   });
   
-describe('Sign in testing', () => {
+describe('Sign in testing', function() {
   this.retries(4)
     it('ID - 15 Sign in with valid email and invalid password', async () => {
         await HeaderPage.clickSignInLink();

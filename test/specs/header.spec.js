@@ -8,7 +8,7 @@ beforeEach(async function () {
     await HelperScripts.closeModalCookiesWindow();
   });
     
-describe('Header testing', () => {
+describe('Header testing', function()  {
     this.retries(4)
     it('ID -2 Check that Product, Solution, Resources,Company,Pricing links in the header menu open dropdown menu when hover those', async () => {
         await HelperScripts.checkButtonsHaveDropdown();

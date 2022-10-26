@@ -6,7 +6,7 @@ beforeEach(async function () {
     await HelperScripts.closeModalCookiesWindow();
   });
   
-describe('Main page testing', () => {
+describe('Main page testing',function ()  {
     this.retries(4)
     it('ID 1 - Open Voice Api from main page', async () => {
         await MainPage.clickVoiceApiLink();

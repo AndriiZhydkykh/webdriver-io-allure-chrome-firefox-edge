@@ -9,7 +9,7 @@ beforeEach(async function () {
     await HelperScripts.closeModalCookiesWindow();
   });
   
-describe('Network page testing', () => {
+describe('Network page testing', function() {
     this.retries(4)
     it('ID - 7 Open the virtual cross connects page from Network link in Header menu', async () => {
         await HeaderPage.clickNetworkButton();
