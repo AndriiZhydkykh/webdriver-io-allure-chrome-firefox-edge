@@ -23,7 +23,7 @@
         "test:chrome:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js",
         "test:firefox:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.firefox.headless.js",
         "test:edge:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.edge.headless.js",
-        "test:allBrowsers:headless": "run-p -r test:chrome:headless test:firefox:headless test:edge:headless --parallel",
+        "test:allBrowsers:headless": "npm-run-all -c test:chrome:headless test:firefox:headless test:edge:headless --parallel",
         "test:firefoxAndEdge:headless": "npm-run-all test:firefox:headless test:edge:headless  --parallel",
         "allureGenerate": "allure generate allure-results --clean",
         "allureReportOpen": "allure open"
