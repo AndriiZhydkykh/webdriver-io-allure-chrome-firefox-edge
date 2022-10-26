@@ -18,10 +18,8 @@ jobs:
         node-version: '14.x'
     - name: Install dependencies
       run: npm ci
-    - name: Install allure
-      run: npm install @wdio/allure-reporter --save-dev
     - name: Run wdio tests
-      run: npm run test:firefoxAndEdge:headless
+      run: test:allBrowsers:headless
       if: always()
     - uses: actions/upload-artifact@master
       with:
