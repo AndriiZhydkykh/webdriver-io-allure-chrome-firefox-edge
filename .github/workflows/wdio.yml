@@ -1,4 +1,4 @@
-name: Webdriver io tests
+name: WebdriverIO Tests
 on:
   push:
     branches: [ main, master ]
@@ -12,17 +12,16 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    name: Checkout
-        - uses: actions/checkout@v2
-        - uses: actions/setup-node@v1
-          with:
-            node-version: 18
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14.x'
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     
-    - name: Run webdriver io tests
-      run: npm run test:allBrowsers:headless
-
+    - name: Run wdio tests
+      run: npm run test:allBrowser:headless 
+      
     - uses: actions/upload-artifact@master
       with:
         name: allure-results
