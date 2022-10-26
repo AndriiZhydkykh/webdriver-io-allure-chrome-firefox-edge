@@ -23,7 +23,7 @@ jobs:
     - name: Install lgooggle
       run: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     - name: Run wdio tests
-      run: npm run test:allBrowser:headless 
+      run: npm run test:allBrowsers:headless 
       
     - uses: actions/upload-artifact@master
       with:
